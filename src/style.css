@@ -1,0 +1,81 @@
+@import "tailwindcss"; 
+@font-face {
+  font-family: "Yekan";
+  src: url(./fonts/yekan-font/yekan-regular.ttf)
+  format("woff2"); 
+  font-weight: 100 900;
+   font-style: normal;
+} 
+@font-face {
+  font-family: "Mina";
+  src: url(./fonts/W_mina/W_mina.ttf)
+  format("ttf"); 
+  font-weight: 100 900;
+   font-style: normal;
+} 
+:root {
+  --color-bg:#080F1c;
+  --color-sidebar:#111827;
+  --color-card:#131A2B;
+  --color-primary:#885Cf6;
+  --color-primary-dark:#7C3AED;
+  --color-blue:#3B82F6;
+  --color-success:#080c0b;
+  --color-text:#F8FAFC;
+  --color-text-secondary:#94A3B8;
+  --color-border:#1E2938
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace; 
+  font-family: "Yekan", sans-serif;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+body { 
+  box-sizing: border-box;
+  background-color: var(--color-bg); 
+  color:var(--color-text);
+  font-family: "Yekan", sans-serif; 
+
+} 
+.btn-primary {
+  background-color: var(--color-primary);
+}
+
+.aside{
+  /*background-color: var(--color-sidebar);*/
+} 
+.logo{
+  color: #F8FAFC;  
+  
+} 
+.inputSearch{
+  background-image: url(./assets/search.svg); 
+  background-repeat: no-repeat; 
+  background-position: 10px center; 
+  padding-left: 40px;
+} 
+.group {
+  gap:20px;
+}

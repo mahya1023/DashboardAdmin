@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+     <link href="/src/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my-project</title>
+  </head>
+  <body dir="rtl">
+    <div class="flex min-h-screen h-screen w-full ">
+     <aside id="asid" class=" asid lg:w-1/5 flex flex-col min-h-screen bg-[#0B1120] border-1 border-white/5"> 
+     </aside>
+     <div class=" flex-1 min-w-0 gap-4 ">
+        <nav class="navbar h-20 flex shrink-0  w-full border-b px-3 lg:px-8 items-center justify-between bg-[#0B1120] border-white/20 ">
+
+        </nav>
+         <main class=" flex-1  p-4 sm:p-6 min-h-[calc(100vh-5rem)] min-w-0 min-h-screen gap-4 flex-col flex "> 
+          <h1 class="text-2xl md:text-3xl font-bold mb-6">مدیریت کاربران</h1> 
+          <div class="box flex flex-wrap w-full min-w-0 justify-center gap-4"></div>
+          <div id="search" class="search flex gap-4 flex-wrap flex-row w-full mt-8 items-center">
+            <div class="search-box flex-1 min-w-[200px]"></div> 
+            <button class="rounded-lg border-1 border-white/20 bg-[#7C3AED] p-3" id="clickbtn">کاربر جدید +</button> 
+            <div class="newUser w-full fixed inset-0 bg-black/60 p-5  z-50 flex items-center justify-center hidden " id="newUser" > 
+              <div class="w-full flex flex-col gap-4 max-w-xs rounded-lg border border-b border-white/10 bg-[#0B1120] p-5 shadow-2xl text-right text-white">
+                <div class="w-full mb-5 flex items-center justify-between border-b border-white/10 pb-4" >
+                  <div class="w-full flex justify-between items-center">
+                    <h2 class="text-base font-semibold">افزودن کاربر </h2> 
+                    <button type="button" id="closeUserModal"  class="rounded-lg p-2 text-slate-400 transition hover:bg-white/10 hover:text-white" 
+                    aria-label=" بستن فرم  ">
+                    &times; 
+                  </button>
+                  </div>
+                </div>
+              <form action="/api/users" method="POST" id="addUserForm" class="space-y-4" novalidate> 
+                <div>
+                  <label for="userName" class="mb-1.5 block text-sm text-slate-400">نام کاربری</label>
+                <input type="text" placeholder="" name="name" id="userName" class="w-full rounded-lg 
+                border border-white/10 bg-[#111B2E] text-sm text-white px-3 py-2.5 outline-none transition focus:border-violet-500">
+                                  <label for="phone" class="mb-1.5 block text-sm text-slate-400">شماره همراه</label>
+                <input type="text" placeholder="0917621**9" id="userPhone" name="phone"class="w-full rounded-lg 
+                border border-white/10 bg-[#111B2E] text-sm text-white px-3 py-2.5 outline-none transition focus:border-violet-500" >
+                                  <label for="email" class="mb-1.5 block text-sm text-slate-400">ایمیل</label>
+                <input type="email" placeholder="mm@gmail.com" id="userEmail" name="email"class="w-full rounded-lg 
+                border border-white/10 bg-[#111B2E] text-sm text-white px-3 py-2.5 outline-none transition focus:border-violet-500" > 
+                <div class="inputradio my-4 flex items-center gap-4 ">
+                 <label class=" flex items-center gap-2 text-sm text-slate-300" for="user">
+                  <input type="radio" id="user" name="role" value="user" class="accent-violet-500"  />
+                  کاربر
+                 </label>
+                 <label for="admin" class=" flex items-center gap-2 text-sm text-slate-300">
+                  <input type="radio" id="admin" name="role" value="Admin" class="accent-violet-500" />
+                  مدیر
+                 </label>
+                </div> 
+                <button type="submit" class="btn_submit text-center rounded-lg bg-violet-600 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-violet-500">ثبت کاربر</button>
+              </form> 
+            </div>
+            </div> 
+          </div> 
+          <div class="user-table mt-8 w-full min-w-0"></div>
+         </main>
+     </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/user.js"></script>
+
+  </body>
+</html>

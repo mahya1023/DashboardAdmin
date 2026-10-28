@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+     <link href="/src/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my-project</title>
+  </head>
+  <body dir="rtl">
+    <div class="flex min-h-screen  w-full ">
+      <aside  class=" asid lg:w-1/5 flex flex-col min-h-screen bg-[#0B1120] border-1 border-white/5"> 
+        <div class="h-20 flex flex-row item-center border-b w-full border-white/20 justify-center gap-2 pt-3">
+          <img src="./src/assets/logo.svg"  class="w-8 h-8 hover:scale-[1.1] transition-all duration-300" alt="logo">
+          <h1 class=" hidden lg:block text-3xl translate-y-1">عدالتنامه</h1>
+        </div>
+        <nav>
+          <ul class="space-y-3 ">
+           <li class="flex flex-row hover:bg-[#7C3AED] transition-all duration-300">
+               <a href="#" class="flex item-center gap-2 p-3">
+                <img src="./src/assets/dashboard.svg" alt="dashboard" class="w-6 h-6 shrink-0"> 
+                <span class=" hidden lg:block">داشبورد</span>
+               </a>
+            </li>
+            
+              <li class="flex flex-row hover:bg-[#7C3AED] transition-all duration-300">
+                <a href="./user.html" class="flex item-center gap-2 p-3">
+                <img src="./src/assets/user.svg" alt="user" class="w-6 h-6 shrink-0"> 
+                <span class=" hidden lg:block">مدیریت کاربران</span>
+               </a>
+            </li>
+              <li class="flex flex-row hover:bg-[#7C3AED] transition-all duration-300">
+               <a href="./order.html" class="flex item-center gap-2 p-3">
+                <img src="./src/assets/order.svg" alt="order" class="w-6 h-6 shrink-0"> 
+                <span class=" hidden lg:block">سفارشات</span>
+               </a>
+            </li>
+              <li class="flex flex-row hover:bg-[#7C3AED] transition-all duration-300 ">
+                <a href="./article.html" class="flex item-center gap-2 p-3">
+                <img  src="./src/assets/article.svg" alt="article" class="w-6 h-6 shrink-0"> 
+                <span class=" hidden lg:block">مقالات</span>
+               </a>
+            </li>
+              <li class="flex flex-row  hover:bg-[#7C3AED] transition-all duration-300"> 
+                <a href="./setting.html" class="flex item-center gap-2 p-3">
+                <img src="./src/assets/setting.svg" alt="setting" class="w-6 h-6 shrink-0"> 
+                <span class=" hidden lg:block">سفارشات</span>
+               </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>  
+      <div class=" flex-1  min-w-0 gap-4 ">
+       <nav class=" navbar h-20 flex shrink-0  w-full border-b px-3 lg:px-8 items-center justify-between bg-[#0B1120] border-white/20">
+       
+       </nav> 
+        <main class=" flex-1  p-6 min-w-0 gap-4 flex-col flex "> 
+          <div class="group grid grid-cols-1 md:grid-cols-3 item-start justify-between " >
+            
+          </div> 
+          <div class="grid grid-cols-1 md:grid-cols-2 justify-center gap-0  p-5 rounded-xl">
+            <div class=" bg-[#131A2B] p-5 rounded-xl mt-5 mr-10 min-w-0 h-64 w-3/4" > 
+              <h2 class="text-white mb-4"> فروش ماهیانه </h2> 
+              <div class="reletive mx-auto h-48">
+              <canvas id="saleChart" ></canvas>
+              </div>
+            </div> 
+            <div class=" bg-[#131A2B]  rounded-xl mr-10  h-64 p-5 mt-5 min-w-0 w-3/4"> 
+              <h1 class="text-white mb-4">درامد ماهیانه </h1>
+              <div class="reletive  mx-auto h-48">
+              <canvas id="incomeCart"></canvas>
+            </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.js" ></script>
+  </body>
+</html> 
+
