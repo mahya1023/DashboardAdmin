@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+
+     <link href="./src/style/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my-project</title>
+  </head>
+  <body dir="rtl">
+    <div class="flex min-h-screen w-full items-stretch">
+     <aside id="asid" class=" asid lg:w-1/5 flex flex-col self-stretch bg-[#0B1120] border-1 border-white/5"> 
+     </aside>
+     <div class=" flex-1 min-w-0 gap-4 ">
+        <nav class="navbar h-20 flex shrink-0  w-full border-b px-3 lg:px-8 items-center justify-between bg-[#0B1120] border-white/20 ">
+
+        </nav>
+         <main class=" flex-1  p-4 sm:p-6 min-h-[calc(100vh-5rem)] min-w-0 min-h-screen gap-4 flex-col flex "> 
+          <h1 class="text-2xl md:text-3xl font-bold mb-6">مدیریت کاربران</h1> 
+          <div class="box flex flex-wrap w-full min-w-0 justify-center gap-4"></div>
+          <div id="search" class="search flex gap-4 flex-wrap flex-row w-full mt-8 items-center">
+            <div class="search-box flex-1 min-w-[200px]"></div> 
+            <button class="rounded-lg border-1 border-white/20 bg-[#7C3AED] p-3" id="clickbtn">کاربر جدید +</button> 
+            <div class="newUser w-full fixed inset-0 bg-black/60 p-5  z-50 flex items-center justify-center hidden " id="newUser" > 
+              <div class="w-full flex flex-col gap-4 max-w-xs rounded-lg border border-b border-white/10 bg-[#0B1120] p-5 shadow-2xl text-right text-white">
+                <div class="w-full mb-5 flex items-center justify-between border-b border-white/10 pb-4" >
+                  <div class="w-full flex justify-between items-center">
+                    <h2 class="text-base font-semibold">افزودن کاربر </h2> 
+                    <button type="button" id="closeUserModal"  class="rounded-lg p-2 text-slate-400 transition hover:bg-white/10 hover:text-white" 
+                    aria-label=" بستن فرم  ">
+                    &times; 
+                  </button>
+                  </div>
+                </div>
+             
+             <div  id="formContainer"></div>
+            </div>
+            </div> 
+          </div> 
+          <div class="user-table mt-8 w-full min-w-0"></div>
+         </main>
+     </div>
+    </div>
+    <script type="module" src="./src/js/main.js"></script>
+    <script type="module" src="./src/js/pages/user.js"></script>
+
+  </body>
+</html>

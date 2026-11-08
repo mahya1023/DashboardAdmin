@@ -1,4 +1,4 @@
-
+import { edite } from "./edite";
 export function userTable(users){
     return ` 
     <div class="w-full rounded-xl border min-w-0 border-white/10 overflow-x-auto"> 
@@ -31,7 +31,7 @@ export function userTable(users){
                   <td class="px-5 py-4">${user.role}</td>
                    <td class="px-5 py-4 font-medium ">
                    
-                   <button class=" edite-btn text-purple-400 p-2" data-id="0" id="edite" > ویرایش</button>
+                   <button class=" edite-btn text-purple-400 p-2" data-id="${user.id}" id="edite" > ویرایش</button>
                    <button class="delete-btn text-red-400 p-2" id="delete">حذف</button> 
                    
                    </td>

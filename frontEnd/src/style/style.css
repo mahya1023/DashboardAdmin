@@ -1,14 +1,14 @@
 @import "tailwindcss"; 
 @font-face {
   font-family: "Yekan";
-  src: url(./fonts/yekan-font/yekan-regular.ttf)
+  src: url(../fonts/yekan-font/yekan-regular.ttf)
   format("woff2"); 
   font-weight: 100 900;
    font-style: normal;
 } 
 @font-face {
   font-family: "Mina";
-  src: url(./fonts/W_mina/W_mina.ttf)
+  src: url(../fonts/W_mina/W_mina.ttf)
   format("ttf"); 
   font-weight: 100 900;
    font-style: normal;
@@ -71,7 +71,7 @@ body {
   
 } 
 .inputSearch{
-  background-image: url(./assets/search.svg); 
+  background-image: url(../../public/assent/icon/search.svg); 
   background-repeat: no-repeat; 
   background-position: 10px center; 
   padding-left: 40px;

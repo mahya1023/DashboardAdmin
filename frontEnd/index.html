@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+     <link href="./src/style/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my-project</title>
+  </head>
+  <body dir="rtl">
+    <div class="flex min-h-screen  w-full ">
+      <aside  class=" asid lg:w-1/5 flex flex-col min-h-screen bg-[#0B1120] border-1 border-white/5"> 
+     
+      </aside>  
+      <div class=" flex-1  min-w-0 gap-4 ">
+       <nav class=" navbar h-20 flex shrink-0  w-full border-b px-3 lg:px-8 items-center justify-between bg-[#0B1120] border-white/20">
+       
+       </nav> 
+        <main class=" flex-1  p-6 min-w-0 gap-4 flex-col flex "> 
+          <div class="group flex flex-wrap w-full min-w-0 justify-center gap-4 " >
+            
+          </div> 
+          <div class="grid grid-cols-1 md:grid-cols-2 justify-center gap-0  p-5 rounded-xl">
+            <div class=" bg-[#131A2B] p-5 rounded-xl mt-5 mr-10 min-w-0 h-64 w-3/4" > 
+              <h2 class="text-white mb-4"> فروش ماهیانه </h2> 
+              <div class="reletive mx-auto h-48">
+              <canvas id="saleChart" ></canvas>
+              </div>
+            </div> 
+            <div class=" bg-[#131A2B]  rounded-xl mr-10  h-64 p-5 mt-5 min-w-0 w-3/4"> 
+              <h1 class="text-white mb-4">درامد ماهیانه </h1>
+              <div class="reletive  mx-auto h-48">
+              <canvas id="incomeCart"></canvas>
+            </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    
+    <script type="module" src="./src/js/main.js" ></script>
+  </body>
+</html> 
+

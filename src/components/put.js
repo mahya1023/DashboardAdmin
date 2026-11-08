@@ -1,14 +1,13 @@
-export async function update() {  
-    try{
-    const response = await fetch('http://localhost:3000/api/users/:id',{
-        method:"PUT",
+export async function update(userData) {   
+    const response = await fetch(`http://localhost:3000/api/users/${id}`,{
+        method:"PUT", 
+        headers:{
+            "Content-Type" : "application/json"
+        } ,
+        body:JSON.stringify(userData)
     }) ; 
-   const res = await response.json();  
-   console.log(res);
-
-    } catch(err) { 
-        console.error(err);
-  
-}
+   if(!response.ok){
+    throw new Error ("ویرایش کاربر ناموفق بود")
+   }
     
 }

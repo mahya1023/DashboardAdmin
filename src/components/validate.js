@@ -1,6 +1,6 @@
 import justValidate from 'just-validate'; 
 import Swal from 'sweetalert2';
-
+import {getUsers} from 'store.js'
 const validator = new justValidate('#addUserForm',{
     errorLabelCssClass:'text-red-400 text-xs mt-1',
     focusInvalidField:true,
@@ -40,7 +40,6 @@ validator.addField("#userName",[
     const btnSubmit =document.querySelector(".btn_submit")  ;
     
     //get data form 
-        console.log(" we are here");
         event.preventDefault(); 
         const formData = new FormData(myform); 
         console.log("my Form:",formData);  

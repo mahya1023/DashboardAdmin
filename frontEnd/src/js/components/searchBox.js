@@ -1,6 +1,7 @@
 import { userTable } from "./userTable"; 
 import { users } from "./store";
-export function searchBox(placeholder) { 
+export function searchBox(placeholder) {  
+    
     return `<search>
     <input id="valuecode" class="inputSearch w-full min-w-0 
      sm-flex-1 p-3 rounded-lg border-1 border-white/20 outline-none bg-[#0B1120]hover:scale-[1.1] transition-all duration-300  " 
